@@ -1,0 +1,8 @@
+pandas
+numpy
+matplotlib
+seaborn
+joblib
+nltk
+google-generativeai
+flask-cors
