@@ -6,3 +6,4 @@ joblib
 nltk
 google-generativeai
 flask-cors
+scikit-learn
