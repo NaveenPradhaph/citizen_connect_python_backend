@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: citizen_connect_backend
+    env: python
+    region: oregon  # Replace with your preferred region (e.g., frankfurt)
+    buildCommand: "pip install -r req.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: FLASK_ENV
+        value: development  # Change to "production" for production environments
+      - key: PORT
+        value: 5001
+    plan: free  # You can change this to starter/pro based on your needs
+    autoDeploy: true
