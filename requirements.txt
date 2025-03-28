@@ -7,3 +7,4 @@ nltk
 google-generativeai
 flask-cors
 scikit-learn
+gunicorn
