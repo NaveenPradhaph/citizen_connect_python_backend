@@ -95,6 +95,10 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({'status': 'CitizenConnect API is live 🚀'}), 200
+
 if __name__ == '__main__':
     # app.run(debug=True, port=5001)
     port = int(os.environ.get('PORT', 5000))  # Render sets PORT automatically
