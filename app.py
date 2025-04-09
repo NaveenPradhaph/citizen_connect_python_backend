@@ -18,6 +18,8 @@ model_predict = joblib.load('best_urgency_classifier.pkl')
 # nltk.download('stopwords', quiet=True)
 # nltk.download('wordnet', quiet=True)
 # nltk.download('punkt', quiet=True)
+nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
 
 # Department keywords
 department_keywords = {
