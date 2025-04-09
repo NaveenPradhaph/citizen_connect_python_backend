@@ -5,6 +5,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import joblib
 import re
+import os
 
 # Flask app
 app = Flask(__name__)
@@ -95,4 +96,6 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    # app.run(debug=True, port=5001)
+    port = int(os.environ.get('PORT', 5000))  # Render sets PORT automatically
+    app.run(debug=False, host='0.0.0.0', port=port)  # 0.0.0.0 allows external access
