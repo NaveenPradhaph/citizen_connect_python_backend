@@ -14,10 +14,10 @@ CORS(app)
 # Load model
 model_predict = joblib.load('best_urgency_classifier.pkl')
 
-# NLTK downloads
-nltk.download('stopwords', quiet=True)
-nltk.download('wordnet', quiet=True)
-nltk.download('punkt', quiet=True)
+# # NLTK downloads
+# nltk.download('stopwords', quiet=True)
+# nltk.download('wordnet', quiet=True)
+# nltk.download('punkt', quiet=True)
 
 # Department keywords
 department_keywords = {

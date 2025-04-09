@@ -2,5 +2,7 @@ services:
   - type: web
     name: citizenconnect-api
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: 
+      pip install -r requirements.txt
+      python -m nltk.downloader punkt stopwords wordnet
     startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
